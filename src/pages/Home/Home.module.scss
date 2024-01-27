@@ -3,6 +3,12 @@
 .container {
   padding: 20px;
 
+  &__loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__error-text {
     color: $color-error-text;
   }

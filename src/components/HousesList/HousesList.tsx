@@ -11,8 +11,6 @@ export const HousesList: FC = ({houses}: Props) => {
 
     const getHouseClassName = (houseColor: string) => {
         switch (houseColor.toLowerCase()) {
-            case 'scarlet and gold1':
-                return styles['scarlet_and_gold'];
             case 'blue and bronze':
                 return styles.blue_and_bronze;
             case 'yellow and black':

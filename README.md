@@ -1,30 +1,75 @@
-# React + TypeScript + Vite
+# Render Houses List
+
+This is a simple react application that will call a API and
+render the data to display a list of houses.
+
+![img.png](img.png)
+
+# Features
+- Displays the list of houses with the info in a card view.
+- Dynamically renders the gradient color according to the house color data.
+
+# Technologies Used
+- ReactJs
+- Typescript
+- Sass
+- Vite
+
+# Getting Started with React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Install dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`npm install`
 
-## Expanding the ESLint configuration
+## Available Scripts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+In the project directory, start the development server:
 
-- Configure the top-level `parserOptions` property like this:
+### `npm run dev`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Runs the app in the development mode.\
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### Data Fetching
+- Implemented data fetching using a `custom hook` called `useFetchHouses`. This hook is responsible for fetching houses data from an external source.
+
+### Styling
+- Used `Verdana` font.
+- For styling, used the `BEM (Block Element Modifier)` methodology, ensuring clear and maintainable class names. For more information see this [documentation](https://en.bem.info/methodology/quick-start/#introduction)
+- Utilized `SCSS modules` for styling, which provide a modular and organized way to manage styles for each component separately.
+- Created a `mixin` for fonts to maintain consistency in `typography` across the application.
+
+### TypeScript
+- TypeScript is integrated into the project to provide `type safety` and enhance code quality.
+- This ensures that the code is robust and less prone to `runtime errors`.
+
+### Commit Convention
+- To ensure readability and consistency in `commit messages`, the conventional commit format is used for writing commit messages that are `clear, concise, and informative`.
+- Each commit message should adhere to the following pattern:
+
+```
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer]
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Where:
+
+- `<type>` specifies the type of the commit (e.g., feat, fix, chore, docs, style).
+- `<scope>` is optional and indicates the scope of the commit (e.g., component name, module).
+- `<description>` is a short, concise description of the change.
+- `[optional body]` provides additional context or details about the change.
+- `[optional footer]` includes any relevant issue or breaking change references.
+
+This convention helps in tracking and understanding the `purpose` of each commit.
+See the section about [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for more information.

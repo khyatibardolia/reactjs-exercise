@@ -2,6 +2,10 @@
 @use "../../assets/styles/variables" as *;
 
 .house_list_wrapper {
+  &__card {
+    padding-bottom: 14px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -30,6 +34,9 @@
 
         &:first-child {
           @include fontRegular(11);
+        }
+        &:last-child {
+          padding-left: 4px;
         }
       }
     }

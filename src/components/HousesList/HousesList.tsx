@@ -26,24 +26,24 @@ export const HousesList: FC = ({houses}: Props) => {
 
     return <div className={styles['house_list_wrapper']}>
         {houses && houses.length && houses.map((house: Houses) => {
-            return <Card
-                key={house.id}
-                header={
-                    <div className={styles['house_list_wrapper__header']}>
-                        <span>{house.name}</span>
-                        <span>{house.animal}</span>
-                    </div>
-                }
-                content={
-                    <div className={styles['house_list_wrapper__content']}>
-                        <div className={`${styles['house_list_wrapper__content__house-color']} 
-                                 ${getHouseClassName(house.houseColours)}`}/>
-                        <div className={styles['house_list_wrapper__content__founder']}>
-                            <span>Founder: </span>
-                            <span>{house.founder}</span>
+            return <div key={house.id} className={styles['house_list_wrapper__card']}>
+                <Card
+                    header={
+                        <div className={styles['house_list_wrapper__header']}>
+                            <span>{house.name}</span>
+                            <span>{house.animal}</span>
                         </div>
-                    </div>
-                }/>
+                    }
+                    content={
+                        <div className={styles['house_list_wrapper__content']}>
+                            <div className={`${styles['house_list_wrapper__content__house-color']} 
+                                 ${getHouseClassName(house.houseColours)}`}/>
+                            <div className={styles['house_list_wrapper__content__founder']}>
+                                <span>Founder: </span>
+                                <span>{house.founder}</span>
+                            </div>
+                        </div>
+                    }/></div>
         })}
     </div>
 }

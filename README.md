@@ -3,7 +3,7 @@
 This is a simple react application that will call a API and
 render the data to display a list of houses.
 
-![](../../Desktop/Screenshot 2024-01-27 at 11.40.39 AM.png)
+![preview.png](src/assets/images/preview.png)
 
 # Features
 - Displays the list of houses with the info in a card view.

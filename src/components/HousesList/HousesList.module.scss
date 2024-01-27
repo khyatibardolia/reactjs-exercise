@@ -1,0 +1,28 @@
+@use "../../assets/styles/_mixins.scss" as *;
+
+.house_list_wrapper {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      @include fontRegular(12);
+
+      &:first-child {
+        @include fontBold(16);
+      }
+    }
+  }
+
+  &__content {
+    &__founder {
+      span {
+        @include fontSemiBold(11);
+
+        &:first-child {
+          @include fontRegular(11);
+        }
+      }
+    }
+  }
+}

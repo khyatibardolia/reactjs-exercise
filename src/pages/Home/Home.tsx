@@ -16,6 +16,6 @@ export const Home: FC = () => {
         </span>
         }
 
-        {!isLoading && houses?.length > 0 && <HousesList/>}
+        {!isLoading && houses?.length > 0 && <HousesList houses={houses}/>}
     </div>
 }

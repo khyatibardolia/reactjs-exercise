@@ -4,7 +4,7 @@ export interface InitialState {
     hasError: boolean,
 }
 
-interface Houses {
+export interface Houses {
     id: string,
     name: string,
     houseColours: string,

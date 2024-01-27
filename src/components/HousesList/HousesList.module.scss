@@ -1,9 +1,11 @@
 @use "../../assets/styles/_mixins.scss" as *;
+@use "../../assets/styles/variables" as *;
 
 .house_list_wrapper {
   &__header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 8px;
 
     span {
       @include fontRegular(12);
@@ -15,7 +17,14 @@
   }
 
   &__content {
+    &__house-color {
+      height: 13px;
+      width: inherit;
+      border-radius: 3px;
+    }
     &__founder {
+      padding-top: 8px;
+      display: flex;
       span {
         @include fontSemiBold(11);
 
@@ -25,4 +34,22 @@
       }
     }
   }
+
+  // Apply gradient dynamically based on the house color
+  .blue_and_bronze {
+    @include generate-gradient($blue-color, $bronze-color);
+  }
+
+  .yellow_and_black {
+    @include generate-gradient($yellow-color, $black-color);
+  }
+
+  .green_and_silver {
+    @include generate-gradient($green-color, $silver-color);
+  }
+
+  .default {
+    @include generate-gradient();
+  }
+
 }

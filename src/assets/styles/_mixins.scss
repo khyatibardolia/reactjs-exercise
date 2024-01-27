@@ -12,3 +12,8 @@
   font-size: #{$size}px;
   font-weight: 600;
 }
+
+@mixin generate-gradient($color1: white, $color2: black) {
+    // Generate gradient based on the provided color
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}

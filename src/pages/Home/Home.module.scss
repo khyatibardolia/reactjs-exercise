@@ -1,3 +1,9 @@
-.wrapper {
+@use "../../assets/styles/variables" as *;
+
+.container {
   padding: 20px;
+
+  &__error-text {
+    color: $color-error-text;
+  }
 }
